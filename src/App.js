@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+//JSX (XML) here can have only one root element . means two div sibilings are not allowed
+/*
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h3>Hello World</h3>
+      <div> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, id!</div>                         
+    </div>
+    //<div></div>       it is sibling of first div -not allowed  div within div alowed(1 parent multiplw child )
+  );
+}
+export default App;*/
+
+export default function App() {
+  let uname = "PARI";
+  let email = "pari@gmail.com";
+
+  return (
+    <div>
+      <div> {uname} </div>
+      <div> {email} </div>
     </div>
   );
 }
-
-export default App;
