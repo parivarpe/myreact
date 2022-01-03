@@ -14,19 +14,29 @@ export default function App() {
 import { useState } from "react";
 
 export default function App() {
-  let [counter, setCounter] = useState(100);
+  let [list, setList] = useState([]);
 
-  const incre = () => setCounter(counter + 1);
-  const decre = () => setCounter(counter - 1);
+  const tweet = () => {
+    setList([...list, 1]);
+  };
 
   return (
     <div>
-      <div>{counter}</div>
-      <div>
-        <input type="button" value="Increament" onClick={incre} />
+      <input type="button" value="Tweet" onClick={tweet} />
 
-        <input type="button" value="Decreament" onClick={decre} />
-      </div>
+      {list.map(() => (
+        <div
+          style={{
+            background: "lightgreen",
+            padding: "3px",
+            border: "solid 1px white",
+            margin: "3px",
+          }}
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+          voluptas totam error. Harum iste ipsa est at beatae perferendis sequi.
+        </div>
+      ))}
     </div>
   );
 }
