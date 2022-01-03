@@ -1,16 +1,4 @@
-//JSX (XML) here can have only one root element . means two div sibilings are not allowed
 /*
-function App() {
-  return (
-    <div>
-      <h3>Hello World</h3>
-      <div> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, id!</div>                         
-    </div>
-    //<div></div>       it is sibling of first div -not allowed  div within div alowed(1 parent multiplw child )
-  );
-}
-export default App;*/
-
 export default function App() {
   let uname = "PARI";
   let email = "pari@gmail.com";
@@ -19,6 +7,26 @@ export default function App() {
     <div>
       <div> {uname} </div>
       <div> {email} </div>
+    </div>
+  );
+}*/
+
+import { useState } from "react";
+
+export default function App() {
+  let [counter, setCounter] = useState(100);
+
+  const incre = () => setCounter(counter + 1);
+  const decre = () => setCounter(counter - 1);
+
+  return (
+    <div>
+      <div>{counter}</div>
+      <div>
+        <input type="button" value="Increament" onClick={incre} />
+
+        <input type="button" value="Decreament" onClick={decre} />
+      </div>
     </div>
   );
 }
